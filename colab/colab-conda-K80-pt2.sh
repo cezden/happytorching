@@ -34,13 +34,14 @@ unset __conda_setup
 
 
 
-EVAL="${COCO_PREFIX}conda create -v -y -n ${T_EN} -c numba -c nvidia -c pytorch \
+EVAL="${COCO_PREFIX}conda create -v -y -n ${T_EN} -c conda-forge -c numba -c nvidia -c pytorch \
  python=${T_PY} numba cudatoolkit=${C_CU_1} \
  mkl mkl-devel cffi numpy scipy mkl_fft tbb scikit-learn seaborn pandas icc_rt llvmlite cython intel-openmp \
  tbb-devel sphinx fftw pymc3 \
  cudnn nvcc_linux-64 libcumlprims \
  pytorch torchvision torchaudio \
- xgboost \
+ pystan \
+ xgboost py-xgboost \
  magma-cuda${C_CU_2}"
 
 echo "${EVAL}"
