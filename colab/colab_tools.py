@@ -23,7 +23,7 @@ def pprint(c):
 
 def env_to_be():
     d = {
-        "py_maj_min": "3.6",
+        "py_maj_min": "3.8",
         "target_env": "mast_env",
         "conda_prefix": "/root/miniconda3"
     }
