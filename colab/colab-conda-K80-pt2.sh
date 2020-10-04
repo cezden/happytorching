@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #target python version
-T_PY="3.6.8"
+T_PY="3.8.3"
 
 #target miniconda prefix
 T_CDIX="/root/miniconda3"
@@ -40,10 +40,11 @@ EVAL="${COCO_PREFIX}conda create -v -y -n ${T_EN} -c numba -c nvidia -c pytorch 
  tbb-devel sphinx fftw pymc3 \
  cudnn nvcc_linux-64 libcumlprims \
  pytorch torchvision torchaudio \
+ xgboost \
  magma-cuda${C_CU_2}"
 
 echo "${EVAL}"
 eval "${EVAL}"
 
-rm colab_tools.py
+#rm colab_tools.py
 
