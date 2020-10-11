@@ -32,15 +32,16 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
+conda update -v -y conda 
 
 EVAL="${COCO_PREFIX}conda create -v -y -n ${T_EN} -c conda-forge -c numba -c nvidia -c pytorch \
  python=${T_PY} numba cudatoolkit=${C_CU_1} \
- mkl mkl-devel cffi numpy scipy mkl_fft tbb scikit-learn seaborn pandas icc_rt llvmlite cython intel-openmp \
+ mkl mkl-devel cffi numpy scipy mkl_fft tbb scikit-learn icc_rt llvmlite cython intel-openmp \
+ seaborn pandas plotly \
  tbb-devel sphinx fftw pymc3 \
  cudnn nvcc_linux-64 libcumlprims \
  pytorch torchvision torchaudio \
- pystan \
+ pystan arviz \
  xgboost py-xgboost \
  magma-cuda${C_CU_2}"
 
